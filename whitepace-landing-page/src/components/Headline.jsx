@@ -7,7 +7,7 @@ function HeadLine ({ title, paragraph, btnText }) {
     <div>
       <h2 className={classTitle} dangerouslySetInnerHTML={{ __html: title.content }} />
       <p className={classP}>{paragraph.content}</p>
-      <ButtonPrimary>{btnText}</ButtonPrimary>
+      {btnText ? <ButtonPrimary>{btnText}</ButtonPrimary> : null}
     </div>
   )
 }
