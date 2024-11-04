@@ -11,6 +11,7 @@ import apple from './assets/Apple.png'
 import microsoft from './assets/microsoft.png'
 import slack from './assets/Slack.png'
 import google from './assets/Google.png'
+import CarruselComments from './components/CarruselComments'
 
 function App () {
   const pricesPlans = {
@@ -243,6 +244,12 @@ function App () {
             }}
             btnText='Read more'
           />
+        </section>
+        <section>
+          <h2 className='text-black font-bold text-6xl tracking-wider'>
+            What Our Clients <span className='line-decoration'>Says</span>
+          </h2>
+          <CarruselComments />
         </section>
       </main>
     </>
