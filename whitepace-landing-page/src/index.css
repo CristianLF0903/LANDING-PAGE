@@ -44,6 +44,12 @@
     background-position: left bottom;
 }
 
+.you-work{
+    background-image: url('./assets/BACKGROUND2.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
 .line-decoration{
     position: relative;
     z-index: 0; /* Asegura que el contenido esté por encima del pseudo-elemento */ 
@@ -63,8 +69,21 @@
     z-index: -1;
 }
 
-/* .line-decoration{
-    background-image: url('./assets/ElementLine.png');
+.line-decoration-blue{
+    position: relative;
+    z-index: 0; /* Asegura que el contenido esté por encima del pseudo-elemento */ 
+}
+
+.line-decoration-blue::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: url('./assets/ElementLineBlue.png');
     background-repeat: no-repeat;
-    background-position: unset;
-} */
+    background-position: bottom;
+    background-size: contain;
+    z-index: -1;
+}
