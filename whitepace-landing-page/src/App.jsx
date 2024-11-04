@@ -4,6 +4,13 @@ import NavBar from './components/NavBar'
 import WorkTogetherImage from './assets/WorkTogetherImage.png'
 import PriceBoard from './components/PriceBoard'
 import ButtonPrimary from './components/Button'
+import youData from './assets/youData.png'
+import Apps from './assets/Apps.png'
+
+import apple from './assets/Apple.png'
+import microsoft from './assets/microsoft.png'
+import slack from './assets/Slack.png'
+import google from './assets/Google.png'
 
 function App () {
   const pricesPlans = {
@@ -47,6 +54,13 @@ function App () {
       ]
     }
   }
+
+  const sponsors = [
+    { name: 'apple', src: apple, id: 1 },
+    { name: 'microsoft', src: microsoft, id: 2 },
+    { name: 'slack', src: slack, id: 3 },
+    { name: 'google', src: google, id: 4 }
+  ]
 
   return (
     <>
@@ -186,6 +200,49 @@ function App () {
             </p>
           </div>
           <ButtonPrimary>Try Taskey</ButtonPrimary>
+        </section>
+        <section className='flex items-center justify-center gap-24 px-56 py-36'>
+          <HeadLine
+            title={{
+              content: '100% <span class="line-decoration">your data</span>',
+              color: 'black'
+            }}
+            paragraph={{
+              content:
+                "The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.",
+              color: 'black'
+            }}
+            btnText='Read more'
+          />
+          <ImgContainer src={youData} alt='youData' sizes='w-full' />
+        </section>
+        <section className='flex flex-col items-center justify-center gap-28 px-56 py-36'>
+          <h2 className='text-black font-bold text-6xl tracking-wider'>
+            Our <span className='line-decoration'>sponsors</span>
+          </h2>
+          <div className='flex items-center justify-between w-full'>
+            {sponsors.map((sponsor) => (
+              <img key={sponsor.id} src={sponsor.src} alt={sponsor.name} />
+            ))}
+          </div>
+        </section>
+        <section
+          className='flex items-center justify-center gap-20 bg-blue-dark px-56 py-36 apps-section'
+          id='Resources'
+        >
+          <ImgContainer src={Apps} alt='Apps' sizes='w-full' />
+          <HeadLine
+            title={{
+              content: 'Work with Your Favorite Apps Using whitepace',
+              color: 'white'
+            }}
+            paragraph={{
+              content:
+                'Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.',
+              color: 'white'
+            }}
+            btnText='Read more'
+          />
         </section>
       </main>
     </>

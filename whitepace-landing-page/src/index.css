@@ -38,6 +38,13 @@
     background-size: cover;
 }
 
+.apps-section{
+    background-image: url('./assets/Element.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .work-management{
     background-image: url('./assets/BACKGROUND.png');
     background-repeat: no-repeat;
